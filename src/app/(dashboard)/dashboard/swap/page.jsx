@@ -1,0 +1,21 @@
+"use client";
+import PageLoader from "@/components/ui/page-loader";
+import SwapWidgetComponent from "./SwapWidget";
+import { useRouter } from "next/navigation";
+import { useStore } from "@/store";
+import { isUserVerified } from "@/lib/auth";
+import { toast } from "sonner";
+
+export default function Swap() {
+   const user = useStore((state) => state.user);
+   const router = useRouter();
+
+   if (!user) {
+      return <PageLoader />;
+   } else if (!isUserVerified(user)) {
+      toast.error(
+         "Your account is currently unverified. Please check your email for the verification link and complete the verification process to proceed with using our services. Thank you.",
+      );
+      router.push("/dashboard");
+   } else return <SwapWidgetComponent />;
+}

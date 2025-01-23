@@ -1,0 +1,436 @@
+[
+   {
+      "inputs": [
+         {
+            "internalType": "string",
+            "name": "_projectId",
+            "type": "string"
+         },
+         {
+            "internalType": "bool",
+            "name": "_status",
+            "type": "bool"
+         }
+      ],
+      "name": "adminAllowRefundOfProject",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+   },
+   {
+      "inputs": [
+         {
+            "internalType": "string",
+            "name": "_projectId",
+            "type": "string"
+         },
+         {
+            "internalType": "bool",
+            "name": "_status",
+            "type": "bool"
+         }
+      ],
+      "name": "adminGiveApprovalToCreator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+   },
+   {
+      "inputs": [
+         {
+            "internalType": "string",
+            "name": "_projectId",
+            "type": "string"
+         }
+      ],
+      "name": "adminWithdrawFunds",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+   },
+   {
+      "inputs": [
+         {
+            "internalType": "string",
+            "name": "_projectId",
+            "type": "string"
+         }
+      ],
+      "name": "contribute",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+   },
+   {
+      "inputs": [
+         {
+            "internalType": "uint256",
+            "name": "_fundNeeded",
+            "type": "uint256"
+         },
+         {
+            "internalType": "uint256",
+            "name": "_duration",
+            "type": "uint256"
+         },
+         {
+            "internalType": "string",
+            "name": "_projectId",
+            "type": "string"
+         }
+      ],
+      "name": "createProject",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+   },
+   {
+      "inputs": [
+         {
+            "internalType": "string",
+            "name": "_projectId",
+            "type": "string"
+         }
+      ],
+      "name": "creatorWithdrawFunds",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+   },
+   {
+      "inputs": [
+         {
+            "internalType": "string",
+            "name": "_projectId",
+            "type": "string"
+         }
+      ],
+      "name": "investorRefund",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+   },
+   {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+   },
+   {
+      "anonymous": false,
+      "inputs": [
+         {
+            "indexed": false,
+            "internalType": "string",
+            "name": "projectId",
+            "type": "string"
+         },
+         {
+            "indexed": false,
+            "internalType": "address",
+            "name": "creator",
+            "type": "address"
+         },
+         {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "fundNeeded",
+            "type": "uint256"
+         },
+         {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "fundRaisingDuration",
+            "type": "uint256"
+         }
+      ],
+      "name": "ProjectCreated",
+      "type": "event"
+   },
+   {
+      "anonymous": false,
+      "inputs": [
+         {
+            "indexed": false,
+            "internalType": "string",
+            "name": "projectId",
+            "type": "string"
+         },
+         {
+            "indexed": false,
+            "internalType": "address",
+            "name": "contributor",
+            "type": "address"
+         },
+         {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+         }
+      ],
+      "name": "contributionReceived",
+      "type": "event"
+   },
+   {
+      "anonymous": false,
+      "inputs": [
+         {
+            "indexed": false,
+            "internalType": "string",
+            "name": "projectId",
+            "type": "string"
+         },
+         {
+            "indexed": false,
+            "internalType": "address",
+            "name": "Address",
+            "type": "address"
+         },
+         {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+         }
+      ],
+      "name": "fundsWithdrawn",
+      "type": "event"
+   },
+   {
+      "inputs": [
+         {
+            "internalType": "address",
+            "name": "_newOwner",
+            "type": "address"
+         }
+      ],
+      "name": "transferOwnerShip",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+   },
+   {
+      "stateMutability": "payable",
+      "type": "fallback"
+   },
+   {
+      "inputs": [
+         {
+            "internalType": "address",
+            "name": "_newAddress",
+            "type": "address"
+         }
+      ],
+      "name": "updateIcoTokenAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+   },
+   {
+      "inputs": [
+         {
+            "internalType": "uint256",
+            "name": "_newAmount",
+            "type": "uint256"
+         }
+      ],
+      "name": "updateMinimumAmount",
+      "outputs": [
+         {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+         }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+   },
+   {
+      "inputs": [
+         {
+            "internalType": "uint256",
+            "name": "_fundNeeded",
+            "type": "uint256"
+         },
+         {
+            "internalType": "string",
+            "name": "_projectId",
+            "type": "string"
+         },
+         {
+            "internalType": "uint256",
+            "name": "_newDuration",
+            "type": "uint256"
+         }
+      ],
+      "name": "updateProject",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+   },
+   {
+      "inputs": [
+         {
+            "internalType": "uint256",
+            "name": "_newSystemFee",
+            "type": "uint256"
+         }
+      ],
+      "name": "updateSystemFee",
+      "outputs": [
+         {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+         }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+   },
+   {
+      "inputs": [],
+      "name": "withdrawSystemFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+   },
+   {
+      "stateMutability": "payable",
+      "type": "receive"
+   },
+   {
+      "inputs": [
+         {
+            "internalType": "string",
+            "name": "_projectId",
+            "type": "string"
+         }
+      ],
+      "name": "checkStatus",
+      "outputs": [
+         {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+         }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+   },
+   {
+      "inputs": [],
+      "name": "IcoTokenBuy",
+      "outputs": [
+         {
+            "internalType": "contract IMyTokenInterface",
+            "name": "",
+            "type": "address"
+         }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+   },
+   {
+      "inputs": [],
+      "name": "minimum",
+      "outputs": [
+         {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+         }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+   },
+   {
+      "inputs": [
+         {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+         }
+      ],
+      "name": "projects",
+      "outputs": [
+         {
+            "internalType": "address",
+            "name": "creator",
+            "type": "address"
+         },
+         {
+            "internalType": "uint256",
+            "name": "fundNeeded",
+            "type": "uint256"
+         },
+         {
+            "internalType": "uint256",
+            "name": "fundRaisingDuration",
+            "type": "uint256"
+         },
+         {
+            "internalType": "uint256",
+            "name": "totalFunds",
+            "type": "uint256"
+         },
+         {
+            "internalType": "bool",
+            "name": "isRefunded",
+            "type": "bool"
+         },
+         {
+            "internalType": "bool",
+            "name": "isSuccessful",
+            "type": "bool"
+         },
+         {
+            "internalType": "bool",
+            "name": "refundApproval",
+            "type": "bool"
+         },
+         {
+            "internalType": "bool",
+            "name": "withdrawApproval",
+            "type": "bool"
+         },
+         {
+            "internalType": "bool",
+            "name": "isCreatorWithdrawn",
+            "type": "bool"
+         },
+         {
+            "internalType": "bool",
+            "name": "isAdminWithdrawn",
+            "type": "bool"
+         }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+   },
+   {
+      "inputs": [],
+      "name": "systemFee",
+      "outputs": [
+         {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+         }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+   },
+   {
+      "inputs": [],
+      "name": "systemFeeCollected",
+      "outputs": [
+         {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+         }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+   }
+]

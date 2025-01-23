@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+   scroll-behavior: smooth;
+}
+
+.border-grad {
+   border-bottom: 1px solid;
+   border-image-slice: 1;
+   border-image-source: linear-gradient(
+      90deg,
+      rgba(224, 225, 226, 0) 0%,
+      #e0e1e2 49.52%,
+      rgba(224, 225, 226, 0.15625) 99.04%
+   );
+}
+
+.primary-dashboard-button {
+   color: white;
+   background: linear-gradient(148.51deg, #007cff 1.2%, #00ccff 93.86%);
+}
+
+/* Custom Scrollbar */
+.chat-sidebar-scroll {
+   /* width */
+   ::-webkit-scrollbar {
+      width: 6px;
+   }
+
+   /* Track */
+   ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+   }
+
+   /* Handle */
+   ::-webkit-scrollbar-thumb {
+      background: #888;
+   }
+
+   /* Handle on hover */
+   ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+   }
+}
+
+.notifications-scroll {
+   /* width */
+   ::-webkit-scrollbar {
+      width: 8px;
+   }
+
+   /* Track */
+   ::-webkit-scrollbar-track {
+      background: #020f33;
+   }
+
+   /* Handle */
+   ::-webkit-scrollbar-thumb {
+      background: #00227e;
+   }
+
+   /* Handle on hover */
+   ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+   }
+}
+
+/* Styles from landing page */
+.nav-labels {
+   font-family: "Poppins", sans-serif;
+   font-weight: 600;
+   font-style: normal;
+}
+
+.primary-button {
+   color: white;
+   background: linear-gradient(148.51deg, #007cff 1.2%, #00ccff 93.86%);
+}
+
+.secondary-button {
+   background-color: transparent;
+   border: 1px solid #007cff;
+}
+
+.partners-bg {
+   background: linear-gradient(
+      180deg,
+      #007cff 0%,
+      #3264a2 0.01%,
+      #00ccff 118.02%
+   );
+}
+
+.secondary-button:hover {
+   background: linear-gradient(148.51deg, #007cff 1.2%, #00ccff 93.86%);
+}
+
+.shad {
+   box-shadow: 0px 4px 4px 0px #b4aeae40;
+}
+
+.blue-gradient {
+   background: linear-gradient(
+      90deg,
+      rgba(0, 124, 255, 0.85) 0%,
+      rgba(0, 204, 255, 0.85) 100%
+   );
+}
+
+/* FONT STYLES */
+.roboto-light {
+   font-family: "Roboto", sans-serif;
+   font-weight: 300;
+   font-style: normal;
+}
+
+.roboto-medium {
+   font-family: "Roboto", sans-serif;
+   font-weight: 500;
+   font-style: normal;
+}
+
+/* Customize the React Slick dots */
+.slick-dots {
+   position: absolute;
+   margin-top: 29px;
+   bottom: 20px;
+   list-style: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0;
+   padding: 0;
+}
+
+.slick-dots li {
+   margin: 0 5px;
+   /* Adjust spacing between dots */
+}
+
+.slick-dots li button {
+   font-size: 12px;
+   color: #fff;
+   background-color: #fff;
+   border: none;
+   border-radius: 50%;
+   width: 12px;
+   height: 12px;
+   cursor: pointer;
+   padding: 0;
+}
+
+.slick-dots li.slick-active button {
+   background-color: #fff;
+   /* Active dot background color */
+}
